@@ -52,6 +52,16 @@ M.nvimtree = {
       show = {
         git = true,
       },
+      glyphs = {
+        folder = {
+          default = "󰉋",
+          emtpy = "󰉖",
+          empty_open = "",
+          open = "󰝰",
+          arrow_open = "",
+          arrow_closed = "",
+        }
+      }
     },
   },
 }
