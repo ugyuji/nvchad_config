@@ -60,8 +60,15 @@ local plugins = {
   {
     "charludo/projectmgr.nvim",
     lazy = false,
-  }
+  },
 
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  }
 
   -- To make a plugin not be loaded
   -- {

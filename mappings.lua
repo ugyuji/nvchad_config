@@ -22,7 +22,13 @@ M.tmux_navigator = {
 
 M.telescope = {
   n = {
-    ["<leader>fp"] = {"<cmd> ProjectMgr <CR>", "Open Project Manager"},
+    ["<leader>fp"] = { "<cmd> ProjectMgr<CR>", "Open Project Manager" },
+  }
+}
+
+M.markdown_preview = {
+  n = {
+    ["<leader>mp"] = { "<cmd> MarkdownPreview<CR>", "Toggle Markdown Preview" },
   }
 }
 
