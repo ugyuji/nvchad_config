@@ -15,6 +15,12 @@ M.ui = {
 
   telescope = { style = "bordered" },
 
+  statusline = {
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+    separator_style = "default", -- default/round/block/arrow
+    overriden_modules = nil,
+  },
+
   nvdash = {
     load_on_startup = true,
     buttons = {
