@@ -20,4 +20,10 @@ M.tmux_navigator = {
   }
 }
 
+M.telescope = {
+  n = {
+    ["<leader>fp"] = {"<cmd> ProjectMgr <CR>", "Open Project Manager"},
+  }
+}
+
 return M
