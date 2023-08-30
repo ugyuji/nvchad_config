@@ -68,6 +68,11 @@ local plugins = {
     build = function()
       vim.fn["mkdp#util#install"]()
     end,
+  },
+
+  {
+    "luk400/vim-jukit",
+    lazy = false,
   }
 
   -- To make a plugin not be loaded
