@@ -78,6 +78,14 @@ local plugins = {
   {
     "ray-x/web-tools.nvim",
     lazy = false,
+    config = function()
+      require("web-tools").setup({
+        keymaps = {
+          rename = nil,
+          repeat_rename = '.',
+        },
+      })
+    end,
   }
 
   -- To make a plugin not be loaded

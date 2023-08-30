@@ -32,4 +32,10 @@ M.markdown_preview = {
   }
 }
 
+M.web_tool = {
+  n = {
+    ["<leader>bo"] = { "<cmd> BrowserOpen<CR>", "Open Browswer Window" },
+  }
+}
+
 return M
