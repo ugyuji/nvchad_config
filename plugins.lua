@@ -73,6 +73,11 @@ local plugins = {
   {
     "luk400/vim-jukit",
     lazy = false,
+  },
+
+  {
+    "ray-x/web-tools.nvim",
+    lazy = false,
   }
 
   -- To make a plugin not be loaded
