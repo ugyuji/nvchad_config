@@ -86,6 +86,11 @@ local plugins = {
         },
       })
     end,
+  },
+
+  {
+    "github/copilot.vim",
+    event = "InsertEnter",
   }
 
   -- To make a plugin not be loaded
