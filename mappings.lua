@@ -17,31 +17,37 @@ M.tmux_navigator = {
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "Window right" },
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "Window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "Window up" },
-  }
+  },
 }
 
 M.telescope = {
   n = {
     ["<leader>fp"] = { "<cmd> ProjectMgr<CR>", "Open Project Manager" },
-  }
+  },
 }
 
 M.markdown_preview = {
   n = {
     ["<leader>mp"] = { "<cmd> MarkdownPreview<CR>", "Toggle Markdown Preview" },
-  }
+  },
 }
 
 M.web_tool = {
   n = {
     ["<leader>bo"] = { "<cmd> BrowserOpen<CR>", "Open Browswer Window" },
-  }
+  },
 }
 
 M.aerial = {
   n = {
     ["<leader>a"] = { "<cmd> AerialToggle<CR>", "Toggle Aerial" },
-  }
+  },
+}
+
+M.minimap = {
+  n = {
+    ["<leader>mt"] = { "<cmd> MinimapToggle<CR>", "Toggle Minimap" },
+  },
 }
 
 return M

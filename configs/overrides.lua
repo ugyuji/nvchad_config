@@ -12,6 +12,7 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "python",
   },
   indent = {
     enable = true,
@@ -33,6 +34,12 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
+
+    -- python stuff
+    "black",
+    "mypy",
+    "ruff",
+    "pyright",
 
     -- c/cpp stuff
     "clangd",
@@ -60,8 +67,8 @@ M.nvimtree = {
           open = "󰝰",
           arrow_open = "",
           arrow_closed = "",
-        }
-      }
+        },
+      },
     },
   },
 }
@@ -69,7 +76,7 @@ M.nvimtree = {
 M.telescope = {
   defaults = {
     prompt_prefix = "   ",
-  }
+  },
 }
 
 return M
