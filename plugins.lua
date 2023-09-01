@@ -101,6 +101,17 @@ local plugins = {
       vim.cmd("let g:minimap_auto_start_win_enter = 1")
       vim.cmd("let g:minimap_width = 10")
     end,
+  },
+
+  {
+    'stevearc/aerial.nvim',
+    lazy = false,
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    },
   }
 
   -- To make a plugin not be loaded

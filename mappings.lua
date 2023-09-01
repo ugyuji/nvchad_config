@@ -38,4 +38,10 @@ M.web_tool = {
   }
 }
 
+M.aerial = {
+  n = {
+    ["<leader>a"] = { "<cmd> AerialToggle<CR>", "Toggle Aerial" },
+  }
+}
+
 return M
