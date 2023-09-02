@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -79,12 +79,12 @@ local plugins = {
     "ray-x/web-tools.nvim",
     lazy = false,
     config = function()
-      require("web-tools").setup({
+      require("web-tools").setup {
         keymaps = {
           rename = nil,
-          repeat_rename = '.',
+          repeat_rename = ".",
         },
-      })
+      }
     end,
   },
 
@@ -97,22 +97,22 @@ local plugins = {
     "wfxr/minimap.vim",
     lazy = false,
     init = function()
-      vim.cmd("let g:minimap_auto_start = 1")
-      vim.cmd("let g:minimap_auto_start_win_enter = 1")
-      vim.cmd("let g:minimap_width = 10")
+      vim.cmd "let g:minimap_auto_start = 1"
+      vim.cmd "let g:minimap_auto_start_win_enter = 1"
+      vim.cmd "let g:minimap_width = 10"
     end,
   },
 
   {
-    'stevearc/aerial.nvim',
+    "stevearc/aerial.nvim",
     lazy = false,
     opts = {},
     -- Optional dependencies
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons"
+      "nvim-tree/nvim-web-devicons",
     },
-  }
+  },
 
   -- To make a plugin not be loaded
   -- {
