@@ -6,18 +6,22 @@ M.treesitter = {
     "lua",
     "html",
     "css",
+    "scss",
     "javascript",
     "typescript",
     "tsx",
+    "json",
+    "dockerfile",
     "c",
     "markdown",
     "markdown_inline",
     "python",
+    "php",
   },
   indent = {
     enable = true,
     -- disable = {
-    --   "python"
+    --   "python",
     -- },
   },
 }
@@ -34,6 +38,11 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
+
+    -- php
+    "php-cs-fixer",
+    "phpstan",
+    "intelephense",
 
     -- python stuff
     "black",
