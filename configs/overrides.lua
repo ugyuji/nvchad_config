@@ -33,6 +33,7 @@ M.mason = {
     "stylua",
 
     -- web dev stuff
+    "js-debug-adapter",
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
@@ -45,6 +46,7 @@ M.mason = {
     "intelephense",
 
     -- python stuff
+    "debugpy",
     "black",
     "mypy",
     "ruff",
