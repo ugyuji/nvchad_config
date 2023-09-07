@@ -1,8 +1,12 @@
 ---@type ChadrcConfig
 local M = {}
+local opt = vim.opt
 
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
+
+opt.relativenumber = true
+opt.number = true
 
 M.ui = {
   theme = "catppuccin",
