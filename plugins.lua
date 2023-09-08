@@ -190,6 +190,32 @@ local plugins = {
     },
   },
 
+  {
+    "phpactor/phpactor",
+    ft = "php",
+    build = "composer install",
+  },
+
+  {
+    "airblade/vim-gitgutter",
+    lazy = false,
+  },
+
+  {
+    "mg979/vim-visual-multi",
+    lazy = false,
+    init = function()
+      vim.cmd "let g:VM_maps = {}"
+      vim.cmd "let g:VM_maps['Find Under'] = '<leader>fu'"
+      vim.cmd "let g:VM_maps['Find Subword Under'] = '<leader>fu'"
+    end,
+  },
+
+  {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
