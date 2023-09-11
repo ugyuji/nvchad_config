@@ -17,6 +17,10 @@ M.override = {
 ---@type HLTable
 M.add = {
   NvimTreeOpenedFolderName = { fg = "green", bold = true },
+  TelescopeMatching = { fg = "red", bg = "black" },
+  GitGutterAdd = { fg = "green" },
+  GitGutterChange = { fg = "yellow" },
+  GitGutterDelete = { fg = "red" },
 }
 
 return M
