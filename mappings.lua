@@ -26,6 +26,26 @@ M.telescope = {
   },
 }
 
+M.lsp = {
+  n = {
+    ["gR"] = { "<cmd> Telescope lsp_references<CR>", "Show LSP References" },
+    ["gd"] = { "<cmd> Telescope lsp_definitions<CR>", "Show LSP Definitions" },
+    ["gi"] = { "<cmd> Telescope lsp_implementations<CR>", "Show LSP Implementations" },
+    ["gt"] = { "<cmd> Telescope lsp_type_definitions<CR>", "Show LSP Type Definitions" },
+    ["<leader>rn"] = {
+      function()
+        vim.lsp.buf.rename()
+      end,
+    },
+    ["<leader>D"] = { "<cmd> Telescope diagnostics bufnr=0<CR>", "Show Diagnostics for File" },
+    ["<leader>d"] = {
+      function()
+        vim.diagnostic.open_float()
+      end,
+    },
+  },
+}
+
 M.markdown_preview = {
   n = {
     ["<leader>mp"] = { "<cmd> MarkdownPreview<CR>", "Toggle Markdown Preview" },

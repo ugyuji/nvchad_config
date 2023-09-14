@@ -1,5 +1,16 @@
 local M = {}
 
+local cmp_ok, cmp = pcall(require, "cmp")
+
+if cmp_ok then
+  M.cmp = {
+    mapping = cmp.mapping.preset.insert {
+      ["<C-k"] = cmp.mapping.select_prev_item(),
+      ["<C-j"] = cmp.mapping.select_next_item(),
+    },
+  }
+end
+
 M.treesitter = {
   ensure_installed = {
     "vim",
@@ -17,6 +28,8 @@ M.treesitter = {
     "markdown_inline",
     "python",
     "php",
+    "bash",
+    "regex",
   },
   indent = {
     enable = true,
@@ -36,6 +49,7 @@ M.mason = {
     "js-debug-adapter",
     "css-lsp",
     "html-lsp",
+    "eslint-lsp",
     "typescript-language-server",
     "deno",
     "prettier",

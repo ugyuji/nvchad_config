@@ -8,6 +8,8 @@ local sources = {
   -- webdev stuff
   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+  b.diagnostics.eslint,
+
   -- Lua
   b.formatting.stylua,
 
@@ -41,7 +43,7 @@ local on_attach = function(client, bufnr)
 end
 
 null_ls.setup {
-  debug = true,
+  -- debug = true,
   sources = sources,
   on_attach = on_attach,
 }
