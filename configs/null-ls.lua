@@ -22,8 +22,9 @@ local sources = {
   b.diagnostics.mypy,
   b.diagnostics.ruff,
 
-  -- cpp
-  b.formatting.clang_format,
+  -- terraform
+  b.formatting.terraform_fmt,
+  b.diagnostics.terraform_validate,
 }
 
 local on_attach = function(client, bufnr)

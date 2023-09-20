@@ -1,19 +1,11 @@
 local dap = require "dap"
 
-require("dap-vscode-js").setup {
-  -- debugger_path = vim.fn.stdpath "data" .. "/lazy/vscode-js-debug",
-  node_path = os.getenv "HOME" .. "/.volta/bin/node",
-  debugger_path = os.getenv "HOME" .. "/.local/share/nvim/lazy/vscode-js-debug",
-  debugger_cmd = { "js-debug-adapter" },
-  adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" }, -- which adapters to register in nvim-dap
-}
-
 require("dap").adapters["pwa-node"] = {
   type = "server",
   host = "localhost",
   port = "${port}",
   executable = {
-    command = "js-debug-adapter", -- As I'm using mason, this will be in the path
+    command = "js-debug-adapter",
     args = { "${port}" },
   },
 }
@@ -23,9 +15,10 @@ for _, language in ipairs { "typescript", "javascript", "typescriptreact" } do
     {
       type = "pwa-node",
       request = "launch",
-      name = "Launch file",
+      name = "Launch File",
       program = "${file}",
       cwd = "${workspaceFolder}",
+      runtimeExecutable = "node",
     },
     {
       type = "pwa-node",

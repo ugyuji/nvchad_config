@@ -85,7 +85,9 @@ M.copilot = {
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>" },
+    ["<leader>db"] = { "<cmd> DapToggleBreakpoint<CR>", "Add Breakpoint at Line" },
+    ["<leader>dr"] = { "<cmd> DapContinue<CR>", "Run or Continue The Debugger" },
+    ["<leader>dt"] = { "<cmd> DapTerminate<CR>", "Terminate The Debugger" },
   },
 }
 

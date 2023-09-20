@@ -30,6 +30,9 @@ M.treesitter = {
     "php",
     "bash",
     "regex",
+    "terraform",
+    "hcl",
+    "yaml",
   },
   indent = {
     enable = true,
@@ -66,9 +69,9 @@ M.mason = {
     "ruff",
     "pyright",
 
-    -- c/cpp stuff
-    "clangd",
-    "clang-format",
+    -- terraform stuff
+    "terraform-ls",
+    "tflint",
   },
 }
 

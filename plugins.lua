@@ -142,6 +142,7 @@ local plugins = {
 
   {
     "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
     dependencies = "mfussenegger/nvim-dap",
     config = function()
       local dap = require "dap"
@@ -161,7 +162,9 @@ local plugins = {
 
   {
     "mfussenegger/nvim-dap",
+    lazy = false,
     config = function()
+      require "custom.configs.dap"
       require("core.utils").load_mappings "dap"
     end,
   },
@@ -181,20 +184,15 @@ local plugins = {
   },
 
   {
-    "mfussenegger/nvim-dap",
-    dependencies = {
-      "rcarriga/nvim-dap-ui",
-      "theHamsta/nvim-dap-virtual-text",
-      "mxsdev/nvim-dap-vscode-js",
-      {
-        "microsoft/vscode-js-debug",
-        build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
-      },
-    },
-    lazy = false,
+    "theHamsta/nvim-dap-virtual-text",
     config = function()
-      require "custom.configs.dap"
+      require("dap-virtual-text").setup {
+        enabled_commands = true,
+      }
     end,
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
   },
 
   {
@@ -208,6 +206,19 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",
     },
+  },
+
+  {
+    "nvim-telescope/telescope-media-files.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/popup.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      require("telescope").load_extension "media_files"
+    end,
   },
 
   {
@@ -241,7 +252,14 @@ local plugins = {
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+      {
+        "rcarriga/nvim-notify",
+        config = function()
+          require("notify").setup {
+            background_colour = "#000000",
+          }
+        end,
+      },
     },
     config = function()
       require("noice").setup {
@@ -279,7 +297,19 @@ local plugins = {
 
   {
     "adelarsq/image_preview.nvim",
-    event = "VeryLazy",
+    lazy = false,
+    config = function()
+      require("image_preview").setup {}
+    end,
+  },
+
+  {
+    "max397574/colortils.nvim",
+    lazy = false,
+    cmd = "Colortils",
+    config = function()
+      require("colortils").setup()
+    end,
   },
 
   -- To make a plugin not be loaded
