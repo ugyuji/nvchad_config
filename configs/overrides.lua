@@ -33,12 +33,16 @@ M.treesitter = {
     "terraform",
     "hcl",
     "yaml",
+    "dockerfile",
   },
   indent = {
     enable = true,
     -- disable = {
     --   "python",
     -- },
+  },
+  autotag = {
+    enable = true,
   },
 }
 
@@ -106,7 +110,34 @@ M.nvimtree = {
 
 M.telescope = {
   defaults = {
+    vimgrep_arguments = {
+      "rg",
+      "-L",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+      "--no-ignore-vcs",
+    },
     prompt_prefix = "   ",
+    file_ignore_patterns = {
+      "node_modules/",
+      "vendor/",
+      ".git/",
+    },
+  },
+  pickers = {
+    find_files = {
+      find_command = {
+        "fd",
+        "--hidden",
+        "--glob",
+        "--no-ignore",
+        "",
+      },
+    },
   },
 }
 

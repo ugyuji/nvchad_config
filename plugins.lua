@@ -46,6 +46,9 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
+    dependencies = {
+      "windwp/nvim-ts-autotag",
+    },
   },
 
   {
@@ -297,7 +300,7 @@ local plugins = {
 
   {
     "adelarsq/image_preview.nvim",
-    lazy = false,
+    -- lazy = false,
     config = function()
       require("image_preview").setup {}
     end,
@@ -310,6 +313,29 @@ local plugins = {
     config = function()
       require("colortils").setup()
     end,
+  },
+
+  {
+    "samodostal/image.nvim",
+    config = function()
+      require("image").setup {
+        render = {
+          min_padding = 5,
+          show_label = true,
+          use_dither = true,
+          foreground_color = true,
+          background_color = true,
+        },
+        events = {
+          update_on_nvim_resize = true,
+        },
+      }
+    end,
+    dependencies = {
+      "m00qek/baleia.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    event = "VeryLazy",
   },
 
   -- To make a plugin not be loaded

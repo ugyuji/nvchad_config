@@ -23,6 +23,7 @@ M.tmux_navigator = {
 M.telescope = {
   n = {
     ["<leader>fp"] = { "<cmd> ProjectMgr<CR>", "Open Project Manager" },
+    ["<leader>fm"] = { "<cmd> Telescope media_files<CR>", "Find media files" },
   },
 }
 
@@ -55,6 +56,7 @@ M.markdown_preview = {
 M.web_tool = {
   n = {
     ["<leader>bo"] = { "<cmd> BrowserOpen<CR>", "Open Browswer Window" },
+    ["<leader>bp"] = { "<cmd> BrowserPreview<CR>", "Open File in Browser" },
   },
 }
 
