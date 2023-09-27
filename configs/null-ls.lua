@@ -19,7 +19,9 @@ local sources = {
 
   -- python
   b.formatting.black,
-  b.diagnostics.mypy,
+  b.diagnostics.mypy.with {
+    extra_args = { "--ignore-missing-imports" },
+  },
   b.diagnostics.ruff,
 
   -- terraform
