@@ -113,7 +113,7 @@ local plugins = {
 
   {
     "github/copilot.vim",
-    lazy = false,
+    event = "InsertEnter",
     config = function()
       -- Mapping tab is already used by NvChad
       vim.g.copilot_no_tab_map = true
