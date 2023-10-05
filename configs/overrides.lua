@@ -57,6 +57,7 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "eslint-lsp",
+    "eslint_d",
     "typescript-language-server",
     "deno",
     "prettier",
@@ -69,9 +70,11 @@ M.mason = {
     -- python stuff
     "debugpy",
     "black",
+    "isort",
     "mypy",
     "ruff",
     "pyright",
+    "pylint",
 
     -- terraform stuff
     "terraform-ls",

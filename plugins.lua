@@ -4,15 +4,6 @@ local overrides = require "custom.configs.overrides"
 local plugins = {
 
   -- Override plugin definition options
-
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    event = "VeryLazy",
-    opts = function()
-      return require "custom.configs.null-ls"
-    end,
-  },
-
   {
     "neovim/nvim-lspconfig",
     -- event = { "BufReadPre", "BufNewFile" },
@@ -22,19 +13,28 @@ local plugins = {
         "antosha417/nvim-lsp-file-operations",
         config = true,
       },
-      -- format & linting
-      -- {
-      --   "jose-elias-alvarez/null-ls.nvim",
-      --   event = "VeryLazy",
-      --   config = function()
-      --     require "custom.configs.null-ls"
-      --   end,
-      -- },
     },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
+  },
+
+  {
+    "stevearc/conform.nvim",
+    lazy = true,
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require "custom.configs.conform"
+    end,
+  },
+
+  {
+    "mfussenegger/nvim-lint",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require "custom.configs.nvim-lint"
+    end,
   },
 
   -- override plugin configs
