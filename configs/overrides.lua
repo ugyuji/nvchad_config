@@ -34,6 +34,8 @@ M.treesitter = {
     "hcl",
     "yaml",
     "dockerfile",
+    "terraform",
+    "gitignore",
   },
   incremental_selection = {
     enable = true,
