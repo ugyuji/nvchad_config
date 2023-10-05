@@ -35,6 +35,15 @@ M.treesitter = {
     "yaml",
     "dockerfile",
   },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "gnn",
+      scope_incremental = false,
+      node_decremental = "<bs>",
+    },
+  },
   indent = {
     enable = true,
     -- disable = {
